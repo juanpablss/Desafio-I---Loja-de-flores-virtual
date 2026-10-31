@@ -1,0 +1,206 @@
+
+:root {
+  --rosa-claro: #fde8ee;
+  --rosa: #f4a6ba;
+  --rosa-escuro: #d9728f;
+  --verde-suave: #a8cfb0;
+  --verde-escuro: #5f8f6b;
+  --branco: #ffffff;
+  --fundo: #fffafb;
+  --texto: #4a4a4a;
+  --texto-suave: #777777;
+  --borda: #f3d3dc;
+  --raio: 16px;
+  --sombra: 0 4px 12px rgba(217, 114, 143, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--texto);
+  background-color: var(--fundo);
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+}
+
+h2 {
+  text-align: center;
+  color: var(--verde-escuro);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  text-align: center;
+  padding: 48px 20px;
+  background: linear-gradient(135deg, var(--rosa-claro), #eaf4ec);
+  border-bottom: 3px solid var(--rosa);
+}
+
+.cabecalho__titulo {
+  font-size: 2.6rem;
+  color: var(--rosa-escuro);
+}
+
+.cabecalho__frase {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  color: var(--verde-escuro);
+}
+
+/* ---------- Conteúdo principal ---------- */
+.conteudo {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.sobre,
+.produtos,
+.instrucoes {
+  margin-bottom: 48px;
+}
+
+.sobre p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--texto-suave);
+}
+
+/* ---------- Lista de produtos (CSS Grid) ---------- */
+.produtos__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* ---------- Card de produto ---------- */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 20px;
+  background-color: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(217, 114, 143, 0.25);
+}
+
+.card__imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  margin-bottom: 16px;
+  font-size: 3.5rem;
+  background-color: var(--rosa-claro);
+  border-radius: 50%;
+}
+
+.card__nome {
+  font-size: 1.3rem;
+  color: var(--texto);
+  margin-bottom: 8px;
+}
+
+.card__descricao {
+  flex-grow: 1; /* empurra o preço para o final, alinhando os cards */
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+  margin-bottom: 14px;
+}
+
+.card__preco {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--verde-escuro);
+}
+
+/* ---------- Instruções e botão ---------- */
+.instrucoes {
+  text-align: center;
+  padding: 32px 20px;
+  background-color: var(--rosa-claro);
+  border-radius: var(--raio);
+}
+
+.instrucoes__passos {
+  margin: 8px 0 24px;
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+}
+
+.botao {
+  padding: 14px 36px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--branco);
+  background-color: var(--rosa-escuro);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao:hover {
+  background-color: var(--verde-escuro);
+  transform: scale(1.05);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--verde-suave);
+  outline-offset: 3px;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  background-color: var(--rosa-claro);
+  border-top: 3px solid var(--rosa);
+}
+
+#nome-estudante {
+  font-weight: bold;
+  color: var(--rosa-escuro);
+}
+
+/* ---------- Ajustes para celulares ---------- */
+@media (max-width: 600px) {
+  .cabecalho {
+    padding: 32px 16px;
+  }
+
+  .cabecalho__titulo {
+    font-size: 2rem;
+  }
+
+  .conteudo {
+    padding: 28px 16px;
+  }
+
+  .botao {
+    width: 100%;
+  }
+}

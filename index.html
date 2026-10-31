@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flora Encanto — Floricultura Virtual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <h1 class="cabecalho__titulo">🌸 Flora Encanto</h1>
+    <p class="cabecalho__frase">Flores que contam histórias, momentos que florescem.</p>
+  </header>
+
+  <main class="conteudo">
+
+    <!--informativo sobre a loja -->
+    <section class="sobre">
+      <h2>Sobre a loja</h2>
+      <p>
+        A Flora Encanto é uma floricultura virtual que oferece buquês e arranjos
+        florais para diferentes ocasiões: aniversários, datas românticas,
+        agradecimentos ou simplesmente para alegrar o dia de alguém especial.
+      </p>
+    </section>
+
+    <!-- PRODUTOS  -->
+    <section class="produtos" aria-labelledby="titulo-produtos">
+      <h2 id="titulo-produtos">Nossos buquês</h2>
+
+      <div class="produtos__lista">
+
+        <!-- Produto 1 -->
+        <article class="card">
+          <div class="card__imagem" role="img" aria-label="Ilustração de uma rosa">🌹</div>
+          <h3 class="card__nome">Buquê de Rosas</h3>
+          <p class="card__descricao">
+            Um buquê clássico e delicado, ideal para demonstrar carinho e amor.
+          </p>
+          <p class="card__preco">R$ 59,90</p>
+        </article>
+
+        <!-- Produto 2 -->
+        <article class="card">
+          <div class="card__imagem" role="img" aria-label="Ilustração de um girassol">🌻</div>
+          <h3 class="card__nome">Buquê de Girassóis</h3>
+          <p class="card__descricao">
+            Uma opção alegre e vibrante para iluminar qualquer ocasião.
+          </p>
+          <p class="card__preco">R$ 49,90</p>
+        </article>
+
+        <!-- Produto 3 -->
+        <article class="card">
+          <div class="card__imagem" role="img" aria-label="Ilustração de uma tulipa">🌷</div>
+          <h3 class="card__nome">Buquê de Tulipas</h3>
+          <p class="card__descricao">
+            Um arranjo elegante e sofisticado para presentear alguém especial.
+          </p>
+          <p class="card__preco">R$ 69,90</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- botão e instruções de compra -->
+    <section class="instrucoes">
+      <h2>Como simular sua compra</h2>
+      <p>Escolha a quantidade de cada produto e descubra o valor da sua compra!</p>
+      <p class="instrucoes__passos">
+        Clique no botão abaixo e responda às perguntas que aparecerão na tela.
+        Digite 0 para os produtos que não deseja comprar.
+      </p>
+
+      <!-- O onclick chama a função simularCompra(), que está no arquivo script.js -->
+      <button type="button" class="botao" onclick="simularCompra()">Simular compra</button>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Flora Encanto — Simulador de compras (Desafio 1)</p>
+    <!-- Para identificar o estudante, basta editar o texto dentro do span abaixo -->
+    <p>Desenvolvido por: <span id="nome-estudante">Juan Pablo</span></p>
+  </footer>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
